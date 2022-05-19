@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  name: github
+  repo: abulte/hugo-netlify
+  branch: master
+  base_url: https://oauth.app.etalab.studio
 media_folder: static/img
 public_folder: /img
 collections:
