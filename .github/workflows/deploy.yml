@@ -1,5 +1,8 @@
 name: Build Pages
 
+env:
+  SITE_URL: https://demo.static-cluster.infra.data.gouv.fr
+
 on:
   push:
     branches:
@@ -31,7 +34,7 @@ jobs:
       #     cp -r themes/design-system-gouvfr/node_modules/@gouvfr/dsfr/dist/ ./static/design-system-gouvfr
 
       - name: Build
-        run: hugo --minify -b https://demo.static-cluster.infra.data.gouv.fr
+        run: hugo --minify -b $SITE_URL
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
